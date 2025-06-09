@@ -2,7 +2,7 @@ import pandas as pd
 from textblob import TextBlob
 
 # 리뷰 데이터 불러오기
-df = pd.read_csv("airbnbview/airbnb_reviews.csv")
+df = pd.read_csv("airbnbview/airbnb_reviews_238_per_quarter.csv")
 
 # 감성 점수 계산 함수
 def get_sentiment(text):
@@ -15,7 +15,7 @@ df['sentiment'] = df['content'].apply(get_sentiment)
 print(df[['content', 'sentiment']].head())
 
 # 저장도 가능
-df.to_csv("airbnbview/airbnb_reviews_sentiment.csv", index=False)
+df.to_csv("airbnbview/airbnb_reviews_sentiment_238.csv", index=False)
 print("✅ 감성 분석이 완료되어 airbnb_reviews_sentiment.csv에 저장되었습니다.")
 # 감성 점수 시각화
 import matplotlib.pyplot as plt

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 데이터 불러오기
-df = pd.read_csv("airbnbview/airbnb_reviews_sentiment.csv")
+df = pd.read_csv("airbnbview/airbnb_reviews_sentiment_238.csv")
 
 # 감성 점수만 추출
 X = df[['sentiment']]
@@ -16,7 +16,7 @@ df['cluster'] = kmeans.fit_predict(X)
 # 클러스터별로 CSV 저장
 for cluster_num in df['cluster'].unique():
     cluster_df = df[df['cluster'] == cluster_num]
-    filename = f"airbnbview/cluster_{cluster_num}_reviews.csv"
+    filename = f"airbnbview/cluster_{cluster_num}_reviews_Q.csv"
     cluster_df.to_csv(filename, index=False)
     print(f"✅ {filename} 저장 완료")
     

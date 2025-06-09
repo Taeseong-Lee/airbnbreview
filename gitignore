@@ -1,0 +1,32 @@
+
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+
+# VSCode settings
+.vscode/
+
+# Data files
+*.csv
+*.xlsx
+*.tsv
+
+# Log files
+*.log
+
+# PDF reports
+*.pdf
+
+# System files
+Thumbs.db
+ehthumbs.db
